@@ -1,0 +1,3 @@
+GET /digest HTTP/1.1
+Authorization: Digest username="admin", realm="realm", nonce="abc", uri="/digest", qop=auth, nc=00000001, cnonce="x", response="00", opaque="y"
+

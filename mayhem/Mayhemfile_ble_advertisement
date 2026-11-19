@@ -1,0 +1,9 @@
+project: savantenvs/arduino-esp32
+target: ble_advertisement
+cmds:
+  - cmd: /mayhem/fuzz_ble_advertisement
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ble_advertisement/testsuite

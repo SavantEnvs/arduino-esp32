@@ -1,0 +1,9 @@
+project: savantenvs/arduino-esp32
+target: core_text
+cmds:
+  - cmd: /mayhem/fuzz_core_text
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/core_text/testsuite

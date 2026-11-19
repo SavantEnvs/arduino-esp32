@@ -1,0 +1,7 @@
+#pragma once
+#define SOC_BLE_SUPPORTED 1
+#define SOC_USB_OTG_SUPPORTED 1
+#define SOC_WIFI_SUPPORTED 1
+#define SOC_I2C_SUPPORTED 1
+#define SOC_I2C_NUM 2
+#define SOC_HP_I2C_NUM 2

@@ -1,0 +1,9 @@
+project: savantenvs/arduino-esp32
+target: arduino_ota
+cmds:
+  - cmd: /mayhem/fuzz_arduino_ota
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/arduino_ota/testsuite

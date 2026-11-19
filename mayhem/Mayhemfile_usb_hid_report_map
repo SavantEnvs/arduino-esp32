@@ -1,0 +1,9 @@
+project: savantenvs/arduino-esp32
+target: usb_hid_report_map
+cmds:
+  - cmd: /mayhem/fuzz_usb_hid_report_map
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/usb_hid_report_map/testsuite

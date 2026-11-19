@@ -1,0 +1,9 @@
+project: savantenvs/arduino-esp32
+target: zigbee_ota_file
+cmds:
+  - cmd: /mayhem/fuzz_zigbee_ota_file
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/zigbee_ota_file/testsuite
